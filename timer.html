@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Timer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+      background-color: #333; /* Default dark background color */
+      color: #fff; /* Default light text color */
+    }
+
+    #timer {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    select {
+      padding: 10px;
+      font-size: 1em;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    #darkModeToggle {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="timer">00:00:00</div>
+
+<label for="hours">Hours:</label>
+<select id="hours">
+    <!-- You can customize the number of hours as per your requirement -->
+    <option value="0">00</option>
+    <option value="1">01</option>
+    <option value="2">02</option>
+    <option value="3">03</option>
+    <option value="4">04</option>
+    <option value="5">05</option>
+    <option value="6">06</option>
+    <option value="7">07</option>
+    <option value="8">08</option>
+    <option value="9">09</option>
+  </select>
+  
+
+<label for="minutes">Minutes:</label>
+<select id="minutes">
+    <!-- You can customize the number of minutes as per your requirement -->
+    <option value="0">00</option>
+    <option value="1">01</option>
+    <option value="2">02</option>
+    <option value="3">03</option>
+    <option value="4">04</option>
+    <option value="5">05</option>
+    <option value="6">06</option>
+    <option value="7">07</option>
+    <option value="8">08</option>
+    <option value="9">09</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>
+    <option value="28">28</option>
+    <option value="29">29</option>
+    <option value="30">30</option>
+    <option value="31">31</option>
+    <option value="32">32</option>
+    <option value="33">33</option>
+    <option value="34">34</option>
+    <option value="35">35</option>
+    <option value="36">36</option>
+    <option value="37">37</option>
+    <option value="38">38</option>
+    <option value="39">39</option>
+    <option value="40">40</option>
+    <option value="41">41</option>
+    <option value="42">42</option>
+    <option value="43">43</option>
+    <option value="44">44</option>
+    <option value="45">45</option>
+    <option value="46">46</option>
+    <option value="47">47</option>
+    <option value="48">48</option>
+    <option value="49">49</option>
+    <option value="50">50</option>
+    <option value="51">51</option>
+    <option value="52">52</option>
+    <option value="53">53</option>
+    <option value="54">54</option>
+    <option value="55">55</option>
+    <option value="56">56</option>
+    <option value="57">57</option>
+    <option value="58">58</option>
+    <option value="59">59</option>
+    <!-- ... up to 59 -->
+  </select>
+
+<label for="seconds">Seconds:</label>
+<select id="seconds">
+  <!-- You can customize the number of seconds as per your requirement -->
+  <option value="0">00</option>
+  <option value="1">01</option>
+  <option value="2">02</option>
+  <option value="3">03</option>
+  <option value="4">04</option>
+  <option value="5">05</option>
+  <option value="6">06</option>
+  <option value="7">07</option>
+  <option value="8">08</option>
+  <option value="9">09</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>
+  <option value="25">25</option>
+  <option value="26">26</option>
+  <option value="27">27</option>
+  <option value="28">28</option>
+  <option value="29">29</option>
+  <option value="30">30</option>
+  <option value="31">31</option>
+  <option value="32">32</option>
+  <option value="33">33</option>
+  <option value="34">34</option>
+  <option value="35">35</option>
+  <option value="36">36</option>
+  <option value="37">37</option>
+  <option value="38">38</option>
+  <option value="39">39</option>
+  <option value="40">40</option>
+  <option value="41">41</option>
+  <option value="42">42</option>
+  <option value="43">43</option>
+  <option value="44">44</option>
+  <option value="45">45</option>
+  <option value="46">46</option>
+  <option value="47">47</option>
+  <option value="48">48</option>
+  <option value="49">49</option>
+  <option value="50">50</option>
+  <option value="51">51</option>
+  <option value="52">52</option>
+  <option value="53">53</option>
+  <option value="54">54</option>
+  <option value="55">55</option>
+  <option value="56">56</option>
+  <option value="57">57</option>
+  <option value="58">58</option>
+  <option value="59">59</option>
+
+
+</select>
+
+<button onclick="startTimer()">Start Timer</button>
+<button onclick="stopTimer()">Stop/Reset</button>
+
+<div id="darkModeToggle">
+  <label for="darkMode">Dark Mode:</label>
+  <input type="checkbox" id="darkMode" checked onchange="toggleDarkMode()">
+</div>
+
+<script>
+  let timerInterval;
+  let timerValue = 0;
+
+  function startTimer() {
+    stopTimer(); // Stop existing timer if any
+
+    const hours = parseInt(document.getElementById('hours').value) || 0;
+    const minutes = parseInt(document.getElementById('minutes').value) || 0;
+    const seconds = parseInt(document.getElementById('seconds').value) || 0;
+
+    timerValue = hours * 3600 + minutes * 60 + seconds;
+
+    updateTimerDisplay();
+
+    timerInterval = setInterval(function () {
+      if (timerValue <= 0) {
+        clearInterval(timerInterval);
+        playNotification();
+      } else {
+        timerValue--;
+        updateTimerDisplay();
+      }
+    }, 1000);
+  }
+
+  function stopTimer() {
+    clearInterval(timerInterval);
+    timerValue = 0;
+    updateTimerDisplay();
+  }
+
+  function updateTimerDisplay() {
+    const hours = Math.floor(timerValue / 3600);
+    const minutes = Math.floor((timerValue % 3600) / 60);
+    const seconds = timerValue % 60;
+
+    const formattedTime = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    document.getElementById('timer').textContent = formattedTime;
+  }
+
+  function playNotification() {
+    // You can customize the notification sound or use a library for more options
+    // Tema de rutas absoultas y las que vienen desde mi navegador, habia cambiar el fin de la url al archivo.mp3 pa que funcione
+ 
+    //con la otra extension
+    const audio = new Audio('/Users/fa/Documents/music.mp3'); 
+    // const audio = new Audio('/music.mp3'); // con live server
+    audio.play();
+    alert('Timer has finished!');
+  }
+
+  function toggleDarkMode() {
+    const darkModeCheckbox = document.getElementById('darkMode');
+    const body = document.body;
+
+    if (darkModeCheckbox.checked) {
+      body.style.backgroundColor = '#333'; // Default dark background color
+      body.style.color = '#fff'; // Default light text color
+    } else {
+      body.style.backgroundColor = '#f0f0f0'; // Light background color
+      body.style.color = '#333'; // Dark text color
+    }
+  }
+</script>
+
+</body>
+</html>
