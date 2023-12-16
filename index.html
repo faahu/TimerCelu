@@ -197,6 +197,10 @@
   <input type="checkbox" id="darkMode" checked onchange="toggleDarkMode()">
 </div>
 
+
+
+
+<!-- JAVASCRIPT -->
 <script>
   let timerInterval;
   let timerValue = 0;
@@ -263,47 +267,7 @@
   }
 
 
-// timer solo 5m
 
-let timer;
-        let timeLeft = 300; // 5 minutes in seconds
-        let isRunning = false;
-
-        function startTimer() {
-            if (!isRunning) {
-                isRunning = true;
-                document.getElementById('startButton').disabled = true;
-                document.getElementById('stopButton').disabled = false;
-                timer = setInterval(updateTimer, 1000);
-            }
-        }
-
-        function stopTimer() {
-            if (isRunning) {
-                isRunning = false;
-                document.getElementById('startButton').disabled = false;
-                document.getElementById('stopButton').disabled = true;
-                clearInterval(timer);
-                updateDisplay(300); // Reset display to 5:00
-            }
-        }
-
-        function updateTimer() {
-            if (timeLeft > 0) {
-                timeLeft--;
-                updateDisplay(timeLeft);
-            } else {
-                stopTimer();
-                playNotification();
-            }
-        }
-
-        function updateDisplay(seconds) {
-            const minutes = Math.floor(seconds / 60);
-            const remainingSeconds = seconds % 60;
-            const display = `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
-            document.getElementById('timer').innerText = display;
-        }
 
 </script>
 
